@@ -13,14 +13,16 @@
 <meta property="og:image" content="img/bg-experience.JPEG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
+  @font-face{font-family:'Obvia';font-weight:700;font-style:normal;font-display:swap;
+  src:url(fonts/Obvia-Bold.woff2) format('woff2'),url(fonts/Obvia-Bold.woff) format('woff'),url(fonts/Obvia-Bold.ttf) format('truetype')}
   :root{
     --black:#0b0b0c; --ink:#141416; --card:#18181b; --line:rgba(255,255,255,.12);
-    --white:#f5f2ee; --muted:#b4b0ab; --lilac:#898CC5; --lilac-d:#6E709E; --hot:#ff4a2b;
+    --white:#f5f2ee; --muted:#b4b0ab; --lilac:#DAE200; --lilac-d:#DAE200; --hot:#ff4a2b;
     --radius:18px;
-    --display:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
-    --body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --display:'Obvia','DM Sans',system-ui,sans-serif;
+    --body:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -31,35 +33,36 @@
   .narrow{max-width:640px}
 
   /* tipografia */
-  h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.95;letter-spacing:.01em;font-weight:800}
-  h2{font-size:clamp(34px,6vw,52px);margin-bottom:18px}
+  h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.95;letter-spacing:.01em;font-weight:700}
+  h2{font-size:clamp(26px,5vw,40px);margin-bottom:18px}
   .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lilac);margin-bottom:14px}
   .lead{color:var(--muted);font-size:18px}
 
   /* header */
   header{position:absolute;top:0;left:0;right:0;z-index:5;padding:20px 0}
-  .brand{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:.02em;text-transform:lowercase;text-decoration:none}
+  .brand{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:lowercase;text-decoration:none}
   .brand span{color:var(--lilac)}
 
   /* hero */
   .hero{position:relative;min-height:min(86svh,720px);display:flex;align-items:flex-end;padding:120px 0 48px;isolation:isolate;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(img/bg-experience.JPEG) center 30%/cover no-repeat}
-  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,.35) 35%,rgba(11,11,12,.92) 85%,var(--black) 100%)}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,12,.2) 0%,rgba(11,11,12,.05) 40%,rgba(11,11,12,.65) 82%,var(--black) 100%)}
+  .hero h1,.hero p{text-shadow:0 2px 14px rgba(0,0,0,.45)}
   .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(11,11,12,.55);backdrop-filter:blur(6px);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:500;margin-bottom:18px}
   .badge i{width:8px;height:8px;border-radius:50%;background:var(--hot);box-shadow:0 0 10px var(--hot)}
-  .hero h1{font-size:clamp(44px,11vw,132px);margin-bottom:16px}
+  .hero h1{font-size:clamp(34px,8.5vw,84px);margin-bottom:16px}
   .hero h1 em{font-style:normal;color:var(--lilac)}
   .hero p{max-width:520px;font-size:19px;color:#e6e2dd;margin-bottom:28px}
 
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--lilac);color:#15101a;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border:0;border-radius:999px;padding:16px 34px;cursor:pointer;transition:transform .15s,background .15s}
-  .btn:hover{background:#A1A3D1;transform:translateY(-2px)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--lilac);color:#15101a;font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border:0;border-radius:999px;padding:16px 34px;cursor:pointer;transition:transform .15s,background .15s}
+  .btn:hover{background:#e8ef3d;transform:translateY(-2px)}
   .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
   .btn.block{width:100%}
 
   /* chips de info */
   .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:-1px;padding:26px 0}
   .fact{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--ink)}
-  .fact b{display:block;font-family:var(--display);font-size:30px;line-height:1;text-transform:uppercase;color:var(--lilac)}
+  .fact b{display:block;font-family:var(--display);font-size:22px;line-height:1;text-transform:uppercase;color:var(--lilac)}
   .fact span{font-size:14px;color:var(--muted)}
   @media(min-width:700px){.facts{grid-template-columns:repeat(4,1fr)}}
 
@@ -70,9 +73,9 @@
   .letter::before{content:"";position:absolute;top:0;left:26px;width:64px;height:6px;background:var(--lilac-d);border-radius:0 0 6px 6px}
   .letter p{margin-bottom:16px}
   .letter p:last-child{margin-bottom:0}
-  .letter .hi{font-family:var(--display);text-transform:uppercase;font-weight:800;font-size:30px;line-height:1.05}
-  .letter strong{background:linear-gradient(transparent 62%,rgba(185,143,209,.45) 0);font-weight:600}
-  .sign{font-family:var(--display);font-size:30px;font-weight:700;text-transform:uppercase;line-height:1}
+  .letter .hi{font-family:var(--display);text-transform:uppercase;font-weight:700;font-size:22px;line-height:1.05}
+  .letter strong{background:linear-gradient(transparent 62%,rgba(218,226,0,.45) 0);font-weight:600}
+  .sign{font-family:var(--display);font-size:22px;font-weight:700;text-transform:uppercase;line-height:1}
   @media(min-width:700px){.letter{padding:44px 48px}}
 
   /* galeria pequena */
@@ -83,11 +86,11 @@
   @media(min-width:561px){.gallery{max-height:300px}}
 
   /* oferta */
-  .offer{border:1px solid var(--line);background:linear-gradient(160deg,#1d1722,var(--card) 60%);border-radius:var(--radius);padding:32px 26px}
+  .offer{border:1px solid var(--line);background:linear-gradient(160deg,#1f2010,var(--card) 60%);border-radius:var(--radius);padding:32px 26px}
   .offer .tag{font-size:14px;color:var(--lilac);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
   .price{display:flex;align-items:baseline;gap:8px;margin:6px 0 4px}
   .price small{font-size:22px;font-family:var(--display);font-weight:700;color:var(--muted)}
-  .price strong{font-family:var(--display);font-size:clamp(72px,16vw,104px);line-height:.9;font-weight:800}
+  .price strong{font-family:var(--display);font-size:clamp(56px,13vw,84px);line-height:.9;font-weight:700}
   .offer .gift{color:#e6e2dd;margin-bottom:22px}
   .incl{list-style:none;display:grid;gap:12px}
   .incl li{display:flex;gap:12px;align-items:flex-start;font-size:16.5px}
@@ -96,7 +99,7 @@
 
   .steps{display:grid;gap:14px;margin-top:8px;counter-reset:s}
   .step{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--ink)}
-  .step::before{counter-increment:s;content:counter(s);flex:none;width:38px;height:38px;border-radius:50%;background:var(--lilac);color:#15101a;font-family:var(--display);font-weight:800;font-size:22px;display:grid;place-items:center}
+  .step::before{counter-increment:s;content:counter(s);flex:none;width:38px;height:38px;border-radius:50%;background:var(--lilac);color:#15101a;font-family:var(--display);font-weight:700;font-size:18px;display:grid;place-items:center}
   .step b{display:block;font-weight:600}
   .step span{color:var(--muted);font-size:15.5px}
   @media(min-width:760px){.steps{grid-template-columns:1fr 1fr}}
@@ -105,12 +108,12 @@
 
   /* formulário */
   .form-sec{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .deadline{display:inline-block;margin-bottom:22px;padding:8px 14px;border-radius:10px;background:rgba(216,185,232,.12);color:var(--lilac);font-weight:600;font-size:15px}
+  .deadline{display:inline-block;margin-bottom:22px;padding:8px 14px;border-radius:10px;background:rgba(218,226,0,.12);color:var(--lilac);font-weight:600;font-size:15px}
   form{display:grid;gap:16px;margin-top:22px}
   label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
   input[type=text],input[type=email],input[type=tel]{width:100%;background:var(--black);border:1.5px solid var(--line);color:var(--white);border-radius:12px;padding:15px 16px;font:inherit;font-size:17px;outline:none;transition:border-color .15s,box-shadow .15s}
   input::placeholder{color:#6f6b72}
-  input:focus{border-color:var(--lilac);box-shadow:0 0 0 4px rgba(216,185,232,.18)}
+  input:focus{border-color:var(--lilac);box-shadow:0 0 0 4px rgba(218,226,0,.18)}
   input.bad{border-color:var(--hot)}
   .err{display:none;color:#ff9a86;font-size:13.5px;margin-top:6px}
   .field.has-err .err{display:block}
@@ -130,7 +133,7 @@
   /* barra fixa mobile */
   .sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,transparent,rgba(11,11,12,.95) 40%);transform:translateY(110%);transition:transform .25s}
   .sticky.on{transform:none}
-  .sticky .btn{width:100%;font-size:20px;padding:14px}
+  .sticky .btn{width:100%;font-size:16px;padding:14px}
   @media(min-width:900px){.sticky{display:none}footer{padding-bottom:40px}}
 
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -194,12 +197,12 @@
       <div class="tag">Investimento</div>
       <div class="price"><small>R$</small><strong>550</strong></div>
       <ul class="incl">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d8b9e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Corrida de 5 km</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d8b9e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>DJ</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d8b9e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Brunch especial</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d8b9e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Brindes exclusivos do dia</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d8b9e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Encontro com amigos e embaixadores da ALL OUT</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d8b9e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Um look ALL OUT de duas peças à sua escolha:</strong> uma parte de cima e uma de baixo, de qualquer modelo disponível no site</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Corrida de 5 km</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>DJ</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Brunch especial</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Brindes exclusivos do dia</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Encontro com amigos e embaixadores da ALL OUT</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Um look ALL OUT de duas peças à sua escolha:</strong> uma parte de cima e uma de baixo, de qualquer modelo disponível no site</span></li>
       </ul>
     </div>
 
