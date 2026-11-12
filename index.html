@@ -19,7 +19,7 @@
   src:url(fonts/Obvia-Bold.woff2) format('woff2'),url(fonts/Obvia-Bold.woff) format('woff'),url(fonts/Obvia-Bold.otf) format('opentype'),url(fonts/Obvia-Bold.ttf) format('truetype')}
   :root{
     --black:#0b0b0c; --ink:#141416; --card:#18181b; --line:rgba(255,255,255,.12);
-    --white:#f5f2ee; --muted:#b4b0ab; --lilac:#DAE200; --lilac-d:#DAE200; --hot:#ff4a2b;
+    --white:#f5f2ee; --muted:#b4b0ab; --lilac:#C9D95C; --lilac-d:#C9D95C; --hot:#ff4a2b;
     --radius:18px;
     --display:'Obvia','DM Sans',system-ui,sans-serif;
     --body:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
@@ -91,6 +91,8 @@
   .price{display:flex;align-items:baseline;gap:8px;margin:6px 0 4px}
   .price small{font-size:22px;font-family:var(--display);font-weight:700;color:var(--muted)}
   .price strong{font-family:var(--display);font-size:clamp(56px,13vw,84px);line-height:.9;font-weight:700}
+  .parcela{color:var(--muted);font-size:16px;margin:0 0 22px}
+  .parcela strong{color:var(--lilac);font-weight:700}
   .offer .gift{color:#e6e2dd;margin-bottom:22px}
   .incl{list-style:none;display:grid;gap:12px}
   .incl li{display:flex;gap:12px;align-items:flex-start;font-size:16.5px}
@@ -196,13 +198,14 @@
     <div class="offer">
       <div class="tag">Investimento</div>
       <div class="price"><small>R$</small><strong>550</strong></div>
+      <p class="parcela">em até <strong>10x R$ 55 sem juros</strong></p>
       <ul class="incl">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Corrida de 5 km</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>DJ</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Brunch especial</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Brindes exclusivos do dia</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Encontro com amigos e embaixadores da ALL OUT</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DAE200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Um look ALL OUT de duas peças à sua escolha:</strong> uma parte de cima e uma de baixo, de qualquer modelo disponível no site</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9D95C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Corrida de 5 km</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9D95C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>DJ</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9D95C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Brunch especial</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9D95C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Brindes exclusivos do dia</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9D95C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Encontro com amigos e embaixadores da ALL OUT</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9D95C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Um look ALL OUT de duas peças à sua escolha:</strong> uma parte de cima e uma de baixo, de qualquer modelo disponível no site</span></li>
       </ul>
     </div>
 
